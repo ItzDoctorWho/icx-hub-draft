@@ -8,7 +8,7 @@ import Testimonials from "./components/Testimonials";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import fetchOpportunities from "./controllers/opportunities";
-
+import InstagramEmbed from "./components/InstagramEmbed";
 const App = () => {
   const [opportunities, setOpportunities] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,6 +16,12 @@ const App = () => {
   useEffect(() => {
     fetchOpportunities({ setOpportunities, setLoading, setError });
   }, []); // Empty dependency array
+
+  const instagramVideoUrls = [
+    "https://www.instagram.com/reel/DBosck_N87a/", // Replace with actual URLs
+    "https://www.instagram.com/reel/DCMvc5RN6MN/",
+    "https://www.instagram.com/reel/DBRr4pCMjv5/",
+  ];
 
   return (
     <>
@@ -29,7 +35,7 @@ const App = () => {
           loading={loading}
           error={error}
         />
-
+        <InstagramEmbed embedUrls={instagramVideoUrls} />
         <Footer />
       </div>
     </>
