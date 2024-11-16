@@ -12,6 +12,10 @@ import user4 from "../assets/profile-pictures/user4.jpg";
 import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
 
+import GTa from "../assets/products/GTA.png";
+import GV from "../assets/products/GV.png";
+import GTe from "../assets/products/GTE.png";
+
 export const navItems = [
   { label: "Features", href: "#" },
   { label: "Workflow", href: "#" },
@@ -175,4 +179,34 @@ export const communityLinks = [
   { href: "#", text: "Conferences" },
   { href: "#", text: "Hackathons" },
   { href: "#", text: "Jobs" },
+];
+
+export const globalPrograms = [
+  {
+    title: "Global Talent",
+    description:
+      "A program for internships and professional experiences abroad.",
+    highlights: [
+      "Professional development",
+      "Cultural exchange",
+      "Global networking",
+    ],
+    logo: GTa,
+  },
+  {
+    title: "Global Volunteer",
+    description: "A program for volunteering opportunities abroad.",
+    highlights: [
+      "Community service",
+      "Personal growth",
+      "Cross-cultural understanding",
+    ],
+    logo: GV,
+  },
+  {
+    title: "Global Teacher",
+    description: "A program for teaching experiences abroad.",
+    highlights: ["Teaching skills", "Cultural immersion", "Global impact"],
+    logo: GTe,
+  },
 ];

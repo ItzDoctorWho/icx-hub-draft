@@ -1,51 +1,34 @@
 import video1 from "../assets/video1.mp4";
 import video2 from "../assets/video2.mp4";
+import bgImage from "../assets/bg.jpeg"; // Use import for consistency
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20">
-      <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-        VirtualR build tools
-        <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
-          {" "}
-          for developers
-        </span>
-      </h1>
-      <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
-        Empower your creativity and bring your VR app ideas to life with our
-        intuitive development tools. Get started today and turn your imagination
-        into immersive reality!
-      </p>
-      <div className="flex justify-center my-10">
-        <a
-          href="#"
-          className="bg-gradient-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md"
-        >
-          Start for free
-        </a>
-        <a href="#" className="py-3 px-4 mx-3 rounded-md border">
-          Documentation
-        </a>
-      </div>
-      <div className="flex mt-10 justify-center">
-        <video
-          autoPlay
-          loop
-          muted
-          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
-        >
-          <source src={video1} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <video
-          autoPlay
-          loop
-          muted
-          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
-        >
-          <source src={video2} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+    <div className="relative bg-cover bg-center">
+      {/* Full-width image banner */}
+      <div
+        className="relative flex justify-center items-center w-full h-[500px] lg:h-[700px] bg-contain bg-center"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
+        {/* Transparent overlay for contrast */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+
+        {/* Motto content */}
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-wide">
+            Dragging impact into
+            <span className="bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
+              {" "}
+              the ecosystem
+            </span>
+          </h1>
+          <p className="mt-6 text-lg text-white max-w-4xl mx-auto">
+            Our mission is to foster meaningful cultural exchange experiences
+            through impactful volunteering and professional opportunities that
+            connect individuals across borders and create lasting change. Join
+            us to build a globally diverse and empowered community!
+          </p>
+        </div>
       </div>
     </div>
   );
